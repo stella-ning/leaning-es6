@@ -63,35 +63,13 @@ log('我要学习ES6');
   * startsWith()：返回布尔值,表示参数字符串是否在源字符串的头部;
   * endsWith()：返回布尔值,表示参数字符串是否在源字符串的尾部;
   * 
-  * repeat()：返回一个新字符串，表示将原字符串重复n次,参数如果n是小数，
-  * 会被取整;如果n是负数或者Infinity，会报错。
+  * repeat()：返回一个新字符
   */
  {
     let s = 'hello ningyuexin';
+
     console.log(s.startsWith('hello'));//true;
     console.log(s.startsWith('ning'));//false;
     console.log(s.endsWith('xin'));//true;
     console.log(s.includes('ning'));//true;
-
-    console.log(s.repeat(2));//hello ningyuexinhello ningyuexin
-
  }
-
- /**
-  * padStart()，padEnd()
-  * 
-  * ES7推出了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。
-  * padStart()用于头部补全，padEnd()用于尾部补全。
-  * padStart和padEnd一共接受两个参数，第一个参数用来指定字符串的最小长度，第二个参数是用来补全的字符串。
-  */
- {
-    'x'.padStart(5, 'ab') // 'ababx'
-    'x'.padStart(4, 'ab') // 'abax'
-    
-    'x'.padEnd(5, 'ab') // 'xabab'
-    'x'.padEnd(4, 'ab') // 'xaba'
-
-    '1'.padStart(2,'0') //01
- }
-
- 

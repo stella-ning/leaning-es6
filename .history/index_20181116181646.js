@@ -91,7 +91,6 @@ log('我要学习ES6');
     'x'.padEnd(5, 'ab') // 'xabab'
     'x'.padEnd(4, 'ab') // 'xaba'
 
-    '1'.padStart(2,'0') //01
+    '1'.padStart(2,'0')
+    console.log('1'.padStart(2,'0'))
  }
-
- 
