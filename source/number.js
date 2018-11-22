@@ -17,3 +17,15 @@
  * Number.isFinite()用来检查一个数值是否为有限的（finite）。
  * Number.isNaN()用来检查一个值是否为NaN。
  */
+
+{
+    console.log('isFinite',Number.isFinite(15));//true
+    console.log('isFinite1',Number.isFinite(Infinity));//false
+
+    console.log('isNAN',Number.isNaN(NaN));//true
+    console.log('isNAN',Number.isNaN(15));//false
+    console.log('isNAN',Number.isNaN('15'));//false
+    console.log('isNAN',Number.isNaN(true));//false
+    console.log('isNAN',Number.isNaN('true'/0));//true
+    
+}
