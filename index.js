@@ -7,6 +7,6 @@
 import './source/number'
 
 let log=(item)=>{console.log(item)};
-log('我要学习ES6');
+log('我要学习ES66666');
 
  
