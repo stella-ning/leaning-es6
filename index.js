@@ -4,7 +4,8 @@
 // import './source/arrow-function';
 // import './source/parameter'
 //import './source/string'
-import './source/number'
+//import './source/number'
+import './source/array'
 
 let log=(item)=>{console.log(item)};
 log('我要学习ES66666');
