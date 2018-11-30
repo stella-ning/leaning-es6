@@ -75,10 +75,72 @@
  * 数组实例的fill()
  * fill方法使用给定值，填充一个数组。
  * 上面代码表明，fill方法用于空数组的初始化非常方便。数组中已有的元素，会被全部抹去。
+ * fill方法还可以接受第二个和第三个参数，用于指定填充的起始位置和结束位置。
  * 
  */
 {
     ['a', 'b', 'c'].fill(7);//[7, 7, 7]
     new Array(3).fill(7);//[7, 7, 7]
 
+    ['a', 'b', 'c'].fill(7, 1, 2);//['a',7,'c']
+}
+
+/**
+ * 数组实例的entries()，keys()和values()
+ * ES6提供三个新的方法——entries()，keys()和values()——用于遍历数组。它们都返回一个遍历器对象（详见《Iterator》一章），可以用for...of循环进行遍历，唯一的区别是keys()是对键名的遍历、values()是对键值的遍历，entries()是对键值对的遍历。
+ */
+
+ {
+    for (let index of ['a', 'b'].keys()) {
+        console.log(index);
+    }
+    //0
+    //1
+
+    for(let elem of ['a','b'].values()){
+        console.log(elem);
+    }
+    //'a'
+    //'b'
+
+    for(let [index,elem] of ['a','b'].entries()){
+        console.log(index,elem);
+    }
+    //0 'a';
+    //1 'b'
+
+    /**
+     * 如果不使用for...of循环，可以手动调用遍历器对象的next方法，进行遍历。
+    */
+    let letter = ['a', 'b', 'c'];
+    let entries = letter.entries();
+    console.log(entries.next().value); // [0, 'a']
+    console.log(entries.next().value); // [1, 'b']
+    console.log(entries.next().value); // [2, 'c']
+ }
+
+ /**
+  * 数组实例的includes()
+  * Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的includes方法类似。该方法属于ES7，但Babel转码器已经支持。
+  * 
+  */
+
+{
+    [1, 2, 3].includes(2);     // true
+    [1, 2, 3].includes(4);     // false
+    [1, 2, NaN].includes(NaN); // true
+
+    /**
+     * 该方法的第二个参数表示搜索的起始位置，默认为0。如果第二个参数为负数，则表示倒数的位置，如果这时它大于数组长度（比如第二个参数为-4，但数组长度为3），
+     * 则会重置为从0开始。
+     * 
+     */
+    [1, 2, 3].includes(3, 3);  // false
+    [1, 2, 3].includes(3, -1); // true
+
+    /**
+     * 另外，Map和Set数据结构有一个has方法，需要注意与includes区分。
+     * Map结构的has方法，是用来查找键名的，比如Map.prototype.has(key)、WeakMap.prototype.has(key)、Reflect.has(target, propertyKey)。
+     * Set结构的has方法，是用来查找值的，比如Set.prototype.has(value)、WeakSet.prototype.has(value)。
+     */
 }
