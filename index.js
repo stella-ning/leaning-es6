@@ -6,7 +6,8 @@
 //import './source/string'
 //import './source/number'
 //import './source/array'
-import './source/function'
+//import './source/function'
+import './source/object'
 
 let log=(item)=>{console.log(item)};
 log('我要学习ES66666');
