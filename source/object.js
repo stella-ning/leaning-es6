@@ -13,4 +13,8 @@
  * 
  * 
  * objcet
+ * test mac
  */
+{
+    console.log(121313);
+}
